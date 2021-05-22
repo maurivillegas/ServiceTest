@@ -27,8 +27,9 @@ namespace ServiceTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TodoContext>(opt =>
-                                               opt.UseSqlServer("Server=127.0.0.1;Database=Test;User Id=sa;Password=maradona"));
+            services.AddDbContext<TodoContext>(
+                opt =>opt.UseSqlServer("Server=127.0.0.1;Database=Test;User Id=sa;Password=maradona")
+                );
             services.AddControllers();
         }
 
